@@ -13,9 +13,8 @@
 //     api.delete(`/events/${id}/leave`);
 
 import api from "./axios";
-
 export const getNearbyEvents = () =>
-    api.get("/events/nearby");
+    api.get("/api/v1/events/nearby");
 
 export const createEvent = async (data) => {
 
@@ -25,7 +24,7 @@ export const createEvent = async (data) => {
 
         const response =
             await api.post(
-                "/events",
+                "/api/v1/events",
                 data
             );
 
@@ -55,7 +54,7 @@ export const createEvent = async (data) => {
 };
 
 export const joinEvent = (id) =>
-    api.post(`/events/${id}/join`);
+    api.post(`/api/v1/events/${id}/join`);
 
 export const leaveEvent = (id) =>
-    api.post(`/events/${id}/leave`);
+    api.post(`/api/v1/events/${id}/leave`);

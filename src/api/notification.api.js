@@ -1,10 +1,10 @@
 import api from "./axios";
 
 export const getNotifications =
-    () => api.get("/notifications");
+    () => api.get("/api/v1/notifications");
 
 export const markNotificationAsRead =
     (id) =>
         api.patch(
-            `/notifications/${id}/read`
+            `/api/v1/notifications/${id}/read`
         );

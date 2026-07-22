@@ -5,7 +5,7 @@ import api from "./axios";
 // =====================================
 
 export const getFeed = (page = 1) =>
-    api.get(`/posts/feed?page=${page}`);
+    api.get(`/api/v1/posts/feed?page=${page}`);
 
 // =====================================
 // Create Post (supports images)
@@ -13,7 +13,7 @@ export const getFeed = (page = 1) =>
 
 export const createPost = (formData) =>
     api.post(
-        "/posts",
+        "/api/v1/posts",
         formData,
         {
             headers: {
@@ -28,7 +28,7 @@ export const createPost = (formData) =>
 // =====================================
 
 export const likePost = (postId) =>
-    api.post(`/posts/${postId}/like`);
+    api.post(`/api/v1/posts/${postId}/like`);
 
 // =====================================
 // Add Comment
@@ -39,7 +39,7 @@ export const addComment = (
     content
 ) =>
     api.post(
-        `/posts/${postId}/comments`,
+        `/api/v1/posts/${postId}/comments`,
         {
             content,
         }
