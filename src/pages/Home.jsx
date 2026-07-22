@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import { usePostStore } from "../store/post.store";
 
-import PostCard from "../components/post/PostCard";
+import PostCard from "../components/post/Postcard";
 import CreatePostModal from "../components/post/CreatePostModal";
 import AppLayout from "../components/layout/AppLayout";
 
