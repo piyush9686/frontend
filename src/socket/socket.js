@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 
 export const socket = io(
 
-    "http://localhost:5000",
+    "https://server-ko7u.onrender.com",
 
     {
 
