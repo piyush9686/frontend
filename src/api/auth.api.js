@@ -10,7 +10,7 @@ export const logoutUser = () =>
     api.post("/auth/logout");
 
 export const getCurrentUser = () =>
-    api.get("/auth/me");
+    api.get("/api/v1/auth/me");
 
 export const refreshToken = () =>
     api.post("/auth/refresh-token");
