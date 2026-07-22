@@ -9,7 +9,7 @@ import BusinessHero from "../components/business/BusinessHero";
 import BusinessInfoCard from "../components/business/BusinessInfoCard";
 
 import ProductSection from "../components/business/ProductSection";
-import OfferSection from "../components/business/OfferSection";
+import OfferSection from "../components/business/offerSection";
 import GallerySection from "../components/business/GallerySection";
 import ReviewSection from "../components/business/ReviewSection";
 
