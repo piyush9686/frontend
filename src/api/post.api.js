@@ -28,7 +28,13 @@ export const createPost = (formData) =>
 // =====================================
 
 export const likePost = (postId) =>
-    api.post(`/api/v1/posts/${postId}/like`);
+    api.post(`/api/v1/posts/${postId}/like`,
+        {
+        headers:{
+            Authorization: `Bearer ${token}`,
+        }
+    }
+    );
 
 // =====================================
 // Add Comment
