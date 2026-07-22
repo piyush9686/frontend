@@ -5,7 +5,13 @@ import api from "./axios";
 // =====================================
 
 export const getFeed = (page = 1) =>
-    api.get(`/api/v1/posts/feed?page=${page}`);
+    api.get(`/api/v1/posts/feed?page=${page}`,
+        {
+            headers:{
+            Authorization: `Bearer ${token}`,
+        }
+        }
+    );
 
 // =====================================
 // Create Post (supports images)
