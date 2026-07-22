@@ -48,5 +48,10 @@ export const addComment = (
         `/api/v1/posts/${postId}/comments`,
         {
             content,
+        },
+        {
+            headers:{
+            Authorization: `Bearer ${token}`,
+        }
         }
     );
