@@ -1,4 +1,4 @@
-import OfferCard from "./Offercard";
+import OfferCard from "./offerCard";
 
 function OfferSection({
 
