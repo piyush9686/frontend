@@ -5,12 +5,7 @@ import api from "./axios";
 // =====================================
 
 export const getFeed = (page = 1) =>
-    api.get(`/api/v1/posts/feed?page=${page}`,
-        {
-            headers:{
-            Authorization: `Bearer ${token}`,
-        }
-        }
+    api.get(`/api/v1/posts/feed?page=${page}`
     );
 
 // =====================================
@@ -20,13 +15,7 @@ export const getFeed = (page = 1) =>
 export const createPost = (formData) =>
     api.post(
         "/api/v1/posts",
-        formData,
-        {
-            headers: {
-                "Content-Type":
-                    "multipart/form-data",
-            },
-        }
+        formData
     );
 
 // =====================================
@@ -34,12 +23,7 @@ export const createPost = (formData) =>
 // =====================================
 
 export const likePost = (postId) =>
-    api.post(`/api/v1/posts/${postId}/like`,
-        {
-        headers:{
-            Authorization: `Bearer ${token}`,
-        }
-    }
+    api.post(`/api/v1/posts/${postId}/like`
     );
 
 // =====================================
@@ -54,10 +38,5 @@ export const addComment = (
         `/api/v1/posts/${postId}/comments`,
         {
             content,
-        },
-        {
-            headers:{
-            Authorization: `Bearer ${token}`,
-        }
         }
     );
