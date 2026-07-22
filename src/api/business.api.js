@@ -5,21 +5,21 @@ import api from "./axios";
 // ======================
 
 export const getNearbyBusinesses = () =>
-    api.get("/api/v1/businesses/nearby");
+    api.get("/businesses/nearby");
 
 // ======================
 // Create Business
 // ======================
 
 export const createBusiness = (data) =>
-    api.post("/api/v1/businesses", data);
+    api.post("/businesses", data);
 
 // ======================
 // Get Single Business
 // ======================
 
 export const getBusinessById = (id) =>
-    api.get(`/api/v1/businesses/${id}`);
+    api.get(`/businesses/${id}`);
 
 // ======================
 // Get My Business
@@ -28,7 +28,7 @@ export const getBusinessById = (id) =>
 export const getMyBusiness = async () => {
 
     const response = await api.get(
-        "/api/v1/businesses/my-business"
+        "/businesses/my-business"
     );
 
     return response.data;
@@ -44,7 +44,7 @@ export const addProduct = (
     product
 ) =>
     api.post(
-        `/api/v1/businesses/${businessId}/products`,
+        `/businesses/${businessId}/products`,
         product
     );
 
@@ -58,7 +58,7 @@ export const updateProduct = (
     product
 ) =>
     api.patch(
-        `/api/v1/businesses/${businessId}/products/${productId}`,
+        `/businesses/${businessId}/products/${productId}`,
         product
     );
 
@@ -71,7 +71,7 @@ export const deleteProduct = (
     productId
 ) =>
     api.delete(
-        `/api/v1/businesses/${businessId}/products/${productId}`
+        `/businesses/${businessId}/products/${productId}`
     );
 
 // ======================
@@ -83,7 +83,7 @@ export const addOffer = (
     offer
 ) =>
     api.post(
-        `/api/v1/businesses/${businessId}/offers`,
+        `/businesses/${businessId}/offers`,
         offer
     );
 
@@ -97,7 +97,7 @@ export const updateOffer = (
     offer
 ) =>
     api.patch(
-        `/api/v1/businesses/${businessId}/offers/${offerId}`,
+        `/businesses/${businessId}/offers/${offerId}`,
         offer
     );
 
@@ -110,7 +110,7 @@ export const deleteOffer = (
     offerId
 ) =>
     api.delete(
-        `/api/v1/businesses/${businessId}/offers/${offerId}`
+        `/businesses/${businessId}/offers/${offerId}`
     );
 
 // ======================
@@ -122,7 +122,7 @@ export const addGalleryImage = (
     image
 ) =>
     api.post(
-        `/api/v1/businesses/${businessId}/gallery`,
+        `/businesses/${businessId}/gallery`,
         { image }
     );
 
@@ -131,7 +131,7 @@ export const deleteGalleryImage = (
     imageIndex
 ) =>
     api.delete(
-        `/api/v1/businesses/${businessId}/gallery/${imageIndex}`
+        `/businesses/${businessId}/gallery/${imageIndex}`
     );
 
 // ======================
@@ -143,7 +143,7 @@ export const addReview = (
     review
 ) =>
     api.post(
-        `/api/v1/businesses/${businessId}/reviews`,
+        `/businesses/${businessId}/reviews`,
         review
     );
 
@@ -152,7 +152,7 @@ export const updateReview = (
     review
 ) =>
     api.put(
-        `/api/v1/businesses/${businessId}/reviews`,
+        `/businesses/${businessId}/reviews`,
         review
     );
 
@@ -160,7 +160,7 @@ export const deleteReview = (
     businessId
 ) =>
     api.delete(
-        `/api/v1/businesses/${businessId}/reviews`
+        `/businesses/${businessId}/reviews`
     );
 
 // ======================
@@ -170,11 +170,11 @@ export const deleteReview = (
 export const recordBusinessView = (businessId) => {
 
     return api.post(
-        `/api/v1/businesses/${businessId}/view`
+        `/businesses/${businessId}/view`
     );
 
 };
 
 
 export const getBusinessAnalytics = (businessId) =>
-    api.get(`/api/v1/businesses/${businessId}/analytics`);
+    api.get(`/businesses/${businessId}/analytics`);

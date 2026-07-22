@@ -14,7 +14,7 @@
 
 import api from "./axios";
 export const getNearbyEvents = () =>
-    api.get("/api/v1/events/nearby");
+    api.get("/events/nearby");
 
 export const createEvent = async (data) => {
 
@@ -24,7 +24,7 @@ export const createEvent = async (data) => {
 
         const response =
             await api.post(
-                "/api/v1/events",
+                "/events",
                 data
             );
 
@@ -54,7 +54,7 @@ export const createEvent = async (data) => {
 };
 
 export const joinEvent = (id) =>
-    api.post(`/api/v1/events/${id}/join`);
+    api.post(`/events/${id}/join`);
 
 export const leaveEvent = (id) =>
-    api.post(`/api/v1/events/${id}/leave`);
+    api.post(`/events/${id}/leave`);

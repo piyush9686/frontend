@@ -7,7 +7,7 @@ import api from "./axios";
 
 export const getNearbyEmergencies = () =>
 
-    api.get("/api/v1/emergencies/nearby");
+    api.get("/emergencies/nearby");
 
 
 // =====================================
@@ -16,7 +16,7 @@ export const getNearbyEmergencies = () =>
 
 export const createEmergency = (data) =>
 
-    api.post("/api/v1/emergencies", data);
+    api.post("/emergencies", data);
 
 
 // =====================================
@@ -27,7 +27,7 @@ export const resolveEmergency = (id) =>
 
     api.patch(
 
-        `/api/v1/emergencies/${id}/resolve`
+        `/emergencies/${id}/resolve`
 
     );
 
@@ -40,7 +40,7 @@ export const getEmergencyById = (id) =>
 
     api.get(
 
-        `/api/v1/emergencies/${id}`
+        `/emergencies/${id}`
 
     );
 
@@ -59,7 +59,7 @@ export const respondToEmergency = (
 
     api.post(
 
-        `/api/v1/emergencies/${id}/respond`,
+        `/emergencies/${id}/respond`,
 
         data
 

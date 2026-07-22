@@ -1,22 +1,22 @@
 import api from "./axios";
 
 export const registerUser = (data) =>
-    api.post("/api/v1/auth/register", data);
+    api.post("auth/register", data);
 
 export const loginUser = (data) =>
-    api.post("/api/v1/auth/login", data);
+    api.post("auth/login", data);
 
 export const logoutUser = () =>
-    api.post("/api/v1/auth/logout");
+    api.post("auth/logout");
 
 export const getCurrentUser = () =>
-    api.get("/api/v1/auth/me");
+    api.get("auth/me");
 
 export const refreshToken = () =>
-    api.post("/api/v1/auth/refresh-token");
+    api.post("auth/refresh-token");
 
 export const updateProfile = (data) =>
     api.patch(
-        "/api/v1/auth/profile",
+        "auth/profile",
         data
     );

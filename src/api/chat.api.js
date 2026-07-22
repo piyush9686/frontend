@@ -5,7 +5,7 @@ import api from "./axios";
 // ======================
 
 export const getConversations = () =>
-    api.get("/api/v1/messages/conversations");
+    api.get("/messages/conversations");
 
 // ======================
 // Get messages
@@ -16,7 +16,7 @@ export const getMessages = (
     page = 1
 ) =>
     api.get(
-        `/api/v1/messages/${conversationId}?page=${page}`
+        `/messages/${conversationId}?page=${page}`
     );
 
 // ======================
@@ -28,7 +28,7 @@ export const sendMessage = (
     content
 ) =>
     api.post(
-        `/api/v1/messages/send/${receiverId}`,
+        `/messages/send/${receiverId}`,
         { content }
     );
 
@@ -40,5 +40,5 @@ export const markMessagesAsRead = (
     conversationId
 ) =>
     api.patch(
-        `/api/v1/messages/read/${conversationId}`
+        `/messages/read/${conversationId}`
     );
